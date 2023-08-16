@@ -16,7 +16,7 @@ unsigned long int get_num_of_words(const char *string, char delim)
 	char *ptr = NULL;
 	char *ptrcpy = NULL;
 
-	ptr = strdup(string);
+	ptr = _strdup(string);
 	ptrcpy = ptr;
 
 	while ((ptr = strchr(ptr, delim)) != NULL)
@@ -89,9 +89,9 @@ char *check_cmd(char **args, char **patharray, char *argv0)
 
 	for (i = 0; i < num_of_words; i++)
 	{
-		strcpy(test, patharray[i]);
-		strcat(test, "/");
-		strcat(test, args[0]);
+		_strcpy(test, patharray[i]);
+		_strcat(test, "/");
+		_strcat(test, args[0]);
 
 		if (stat(test, &st) == 0)
 		{
@@ -101,7 +101,7 @@ char *check_cmd(char **args, char **patharray, char *argv0)
 			return (args[0]);
 		}
 	}
-	printf(stderr, "%s: 1: %s: not found\n", argv0, args[0]);
+	fprintf(stderr, "%s: 1: %s: not found\n", argv0, args[0]);
 	free(path);
 	free(args[0]);
 	return (NULL);
