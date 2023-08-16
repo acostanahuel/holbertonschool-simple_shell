@@ -1,7 +1,17 @@
 #include "shell.h"
+/**
+ * main: tells the compiler to
+ * ignore any warnings about the variable being unused.
+ *
+ *@argv: The `argv` parameter is an array of strings that represents
+ * the command-line argument passed to the program
+ * @argc: is a parameter in the `main` function that represents the
+ * number of command-line arguments passed to the program. It stands for
+ * "argument count".
+ * Return: The main function is returning an integer value.
+ */
 
-int 
-main(__attribute__((unused)) int argc, char **argv)
+int main(__attribute__((unused)) int argc, char **argv)
 {
 	char *inputstr, **array, *path = getpath();
 	char **patharray = getpatharray();
