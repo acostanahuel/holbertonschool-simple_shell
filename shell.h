@@ -12,7 +12,8 @@
 #include <sys/stat.h>
 
 unsigned long int get_num_of_words(const char *string, char delim);
-
+char **str_to_array(char *buffer, unsigned long int n, char *delim);
+char *check_cmd(char **args, char **patharray, char *argv0);
 
 
 
