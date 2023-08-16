@@ -76,7 +76,7 @@ char **str_to_array(char *buffer, unsigned long int n, char *delim)
 char *check_cmd(char **args, char **patharray, char *argv0)
 {
 	unsigned long int i;
-	char test[1026];
+	char test[1024];
 	char *path;
 	unsigned long int num_of_words;
 	struct stat st;
