@@ -1,9 +1,12 @@
 #include "shell.h"
-
-
-
-char 
-**getpatharray(void)
+/**
+* The above code defines functions to retrieve the PATH environment variable and convert it into an
+* array of strings.
+*
+* @getpatharray: Returns a pointer to a character array (`char **`).
+* @Return: pointer.
+*/
+char **getpatharray(void)
 {
 	char *path;
 	char **patharray;
@@ -27,16 +30,14 @@ char
 
 	for (i = 0; environ[i]; i++)
 	{
-	
 		strcpy(envcpy, environ[i]);
 
 		if (strcmp((strtok(envcpy, "=")), "PATH") == 0)
 		{
-			path = strdup(strtok(NULL, "\n"));
-			
-			return (path);
+			path = _strdup(strtok(NULL, "\n"));
+
+	return (path);
 		}
-			
 	}
 	return (NULL);
 }
