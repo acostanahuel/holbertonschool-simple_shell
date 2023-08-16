@@ -60,7 +60,7 @@ char *get_input_str(int mode)
 		free(str);
 		return (strdup("exit"));
 	}
-	/*chec EOF (CRL + D*/
+	/*check exit EOF (CRL + D*)*/
 
 	str = remove_spaces_from_beginning(str);
 
