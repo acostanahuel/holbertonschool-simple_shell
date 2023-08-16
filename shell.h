@@ -1,6 +1,5 @@
 #ifndef SHELL_H
 #define SHELL_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -11,19 +10,22 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+
+typedef unsigned long int uli;
+
+extern char **environ;
+
+
 unsigned long int get_num_of_words(const char *string, char delim);
 char **str_to_array(char *buffer, unsigned long int n, char *delim);
 char *check_cmd(char **args, char **patharray, char *argv0);
 char **getpatharray(void);
 char *getpath(void);
+char *get_input_str(int mode);
 void free_all(char **args, uli nargs, char **path, uli npath, char *input);
 void free_grid(char **grid, int height);
 
-typedef unsigned long int uli;
-
-
-extern char **environ;
-
+/*auxiliar*/
 
 int fork_and_exec(char **args);
 int _strcmp(const char *str1, const char *str2);

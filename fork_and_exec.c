@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
-*fork_n_exec - fork n excve
+*fork_and_exec - fork and excve
 *@args: arguments
 *
 *Return: status
