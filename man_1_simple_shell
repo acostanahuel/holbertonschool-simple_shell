@@ -1,0 +1,59 @@
+HSH(1)                           User Commands                          HSH(1)
+
+NAME
+       hsh - A simple UNIX command interpreter (Shell)
+
+SYNOPSIS
+       ./hsh
+
+DESCRIPTION
+       hsh is a simple UNIX command interpreter (shell) that allows users to
+       enter and execute basic commands. It provides a prompt, waits for user
+       input, and executes the specified command.
+
+
+INTERACTIVE COMMANDS
+       The shell supports the following interactive commands:
+
+       exit
+              Terminate the shell program.
+
+       env
+              Print the current environment variables.
+
+COMMAND EXECUTION
+       The shell processes user commands as follows:
+
+       1. Display a prompt ($ ) and wait for user input.
+       2. Read the user input and tokenize it into separate words.
+       3. Trim leading and trailing whitespace from the input.
+       4. If the input is "exit", terminate the shell.
+       5. If the input is "env", print environment variables.
+       6. Otherwise, attempt to locate and execute the specified command.
+
+PATH RESOLUTION
+       The shell locates executables using the PATH environment variable.
+       If a command is not found in the current directory, the shell searches
+       through directories listed in PATH to find the executable.
+
+SPECIAL CHARACTERS
+       The shell handles the following special characters:
+       " ' ` \ * & #
+
+EXIT STATUS
+       The shell exits with status 0 upon successful execution of commands.
+       If an error occurs during command execution, the exit status may vary.
+
+EXAMPLES
+       $ hsh
+       $ $ ls
+       file1 file2
+       $ exit
+
+AUTHOR
+       This shell was developed by [Martin Morales] and [Nahuel Acosta].
+
+BUGS
+       No known bugs.
+
+                                  [14/08/2023]                              SH(1)

@@ -2,7 +2,7 @@
 
 /**
  * get_num_of_words - Gets number of words in string
- * 
+ *
  * @delim: delimiter
  * @string: string
  * Return: ul
@@ -31,19 +31,19 @@ unsigned long int get_num_of_words(const char *string, char delim)
 }
 
 /**
- * str_to_array - splits a string from imput and 
+ * str_to_array - splits a string from input and
  * return an array of each word of the string
  *
- *@buffer: buffer 
+ *@buffer: buffer
  *@n: number of words
  *@delim: delimiter
  *
- * return: pointer to array of strings
+ * Return: pointer to array of strings
  */
 
 char **str_to_array(char *buffer, unsigned long int n, char *delim)
 {
-	
+
 	char *currentToken;
 	char **array;
 	int i = 0;
@@ -69,7 +69,7 @@ char **str_to_array(char *buffer, unsigned long int n, char *delim)
  *
  *@args: arguments
  *@patharray: pointer to patharray pp to path pointer
- *return: args or NULL
+ * Return: args or NULL
  */
 
 
@@ -97,7 +97,7 @@ char *check_cmd(char **args, char **patharray, char *argv0)
 		{
 			free(args[0]);
 			free(path);
-			args[0] = strdup(test);
+			args[0] = _strdup(test);
 			return (args[0]);
 		}
 	}

@@ -58,7 +58,7 @@ char *get_input_str(int mode)
 	if (characters == -1)
 	{
 		free(str);
-		return (strdup("exit"));
+		return (_strdup("exit"));
 	}
 	/*check exit EOF (CRL + D*)*/
 
